@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NEUROCRAFTS — AI-дизайн и Нейроразработка</title>
+    <meta name="description" content="AI креатив для бренда, перенос логотипа, дизайн упаковки. Цены от 2,500₽. Сроки 1-7 дней.">
+    <meta name="keywords" content="AI креатив, перенос логотипа, дизайн упаковки, NEUROCRAFTS, AI контент, брендинг, соцсети">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="NEUROCRAFTS">
+    <meta property="og:title" content="NEUROCRAFTS — AI-дизайн и Нейроразработка">
+    <meta property="og:description" content="Премиальные услуги AI-дизайна, creative tech и нейроразработки">
+    <meta property="og:type" content="website">
+    <meta name="twitter:title" content="NEUROCRAFTS — AI-дизайн и Нейроразработка">
+    <meta name="twitter:description" content="Премиальные услуги AI-дизайна, creative tech и нейроразработки">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <!-- Preconnect для оптимизации загрузки внешних ресурсов -->
+    <link rel="preconnect" href="https://resource.trickle.so">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://i.imgur.com">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "NEUROCRAFTS",
+      "description": "Премиальные услуги AI-дизайна, creative tech и нейроразработки",
+      "url": "http://neurocrafts.ru",
+      "logo": "http://neurocrafts.ru/logo.png",
+      "sameAs": [
+        "https://t.me/neurocraftsru",
+        "https://github.com/neurocrafts"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "craftsneuro@gmail.com",
+        "contactType": "Customer Service"
+      }
+    }
+    </script>
+    
+    <style>
+        body { margin: 0; background: #000; color: #fff; }
+    </style>
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      // EmailJS Configuration - ACTIVE
+      // Письма отправляются на craftsneuro@gmail.com
+      window.EMAILJS_PUBLIC_KEY = 'xYecC-27qntuOhKBp';
+      window.EMAILJS_SERVICE_ID = 'service_fck3vzn';
+      window.EMAILJS_TEMPLATE_ID = 'template_qpb4e8i';
+      
+      // Initialize EmailJS
+      (function() {
+        emailjs.init(window.EMAILJS_PUBLIC_KEY);
+      })();
+    </script>
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #FFFFFF;
+            --accent-color: #FFD600;
+            --border-width: 4px;
+        }
+    }
+
+    @layer base {
+        body {
+            @apply bg-black text-white font-sans;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        
+        * { scroll-behavior: smooth; }
+        
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+        
+        button, a { min-height: 44px; min-width: 44px; }
+    }
+
+    @layer components {
+        .brutal-box {
+            @apply bg-white text-black border-4 border-black;
+        }
+        
+        .brutal-box-inverse {
+            @apply bg-black text-white border-4 border-white;
+        }
+        
+        .noise-bg {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' /%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            -webkit-backdrop-filter: blur(40px);
+            backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    @layer utilities {
+        .sharp-shadow {
+            box-shadow: 8px 8px 0 rgba(255, 214, 0, 1);
+        }
+        
+        .sharp-shadow-white {
+            box-shadow: 8px 8px 0 rgba(255, 255, 255, 1);
+        }
+    }
+    </style>
+</head>
+<body>
+    <button 
+      id="scroll-to-top" 
+      onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+      style="position: fixed; bottom: 2rem; left: auto; right: 7rem; width: 3.5rem; height: 3.5rem; border-radius: 50%; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); display: none; align-items: center; justify-content: center; z-index: 40; cursor: pointer; transition: all 0.3s;" 
+      aria-label="Наверх"
+      onmouseenter="this.style.background='rgba(255,255,255,0.2)';"
+      onmouseleave="this.style.background='rgba(255,255,255,0.1)';"
+    >
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+        <path d="M18 15l-6-6-6 6"/>
+      </svg>
+    </button>
+    <a 
+      href="https://t.me/neurocraftsru" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      id="telegram-button" 
+      style="position: fixed; bottom: 2rem; right: 2rem; width: 4rem; height: 4rem; border-radius: 50%; background: #0088cc; display: flex; align-items: center; justify-content: center; z-index: 50; cursor: pointer; transition: all 0.3s; box-shadow: 0 8px 32px rgba(0, 136, 204, 0.4); border: none;" 
+      aria-label="Написать в Telegram"
+      onmouseenter="this.style.transform='scale(1.1)'; this.style.background='#0077b5'; this.style.boxShadow='0 12px 48px rgba(0, 136, 204, 0.6)';"
+      onmouseleave="this.style.transform='scale(1)'; this.style.background='#0088cc'; this.style.boxShadow='0 8px 32px rgba(0, 136, 204, 0.4)';"
+    >
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="white" stroke="none">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+      </svg>
+    </a>
+    <div id="root"></div>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TQVEB29TNF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TQVEB29TNF', {
+        'page_title': document.title,
+        'page_location': window.location.href,
+        'send_page_view': true
+      });
+    </script>
+    
+    <script>
+      // Event tracking function for custom events
+      window.trackEvent = function(category, action, label) {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', action, {
+            'event_category': category,
+            'event_label': label
+          });
+          console.log('GA4 Event tracked:', { category, action, label });
+        } else {
+          console.log('GA4 not loaded. Event:', { category, action, label });
+        }
+      };
+    </script>
+    
+    <!-- Yandex.Metrika -->
+    <script type="text/javascript">
+      // Replace XXXXXXXX with your actual Yandex.Metrika counter ID
+      // Uncomment the code below after getting your counter ID
+      /*
+      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+      ym(XXXXXXXX, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+      });
+      */
+    </script>
+    <script type="text/babel" src="config.js"></script>
+    <script type="text/babel" src="utils/hooks/useLocalStorage.js"></script>
+    <script type="text/babel" src="utils/hooks/useProjects.js"></script>
+    <script type="text/babel" src="utils/hooks/useScrollVisibility.js"></script>
+    <script type="text/babel" src="utils/hooks/useIntersectionObserver.js"></script>
+    <script>
+      // Scroll to top button visibility
+      window.addEventListener('scroll', function() {
+        const scrollBtn = document.getElementById('scroll-to-top');
+        if (scrollBtn) {
+          if (window.scrollY > 300) {
+            scrollBtn.style.display = 'flex';
+          } else {
+            scrollBtn.style.display = 'none';
+          }
+        }
+      });
+    </script>
+    <script type="text/babel" src="components/ScrollIndicator.js"></script>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/HeroBrutal.js"></script>
+    <script type="text/babel" src="components/Services.js"></script>
+    <script type="text/babel" src="components/Gallery.js"></script>
+    <script type="text/babel" src="components/ProjectModal.js"></script>
+    <script type="text/babel" src="components/Benefits.js"></script>
+    <script type="text/babel" src="components/ContactForm.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>

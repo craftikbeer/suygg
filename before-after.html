@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Редизайн До/После — NEUROCRAFTS</title>
+    <meta name="description" content="Примеры редизайна наших работ до и после">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #FFFFFF;
+            --accent-color: #E0E0E0;
+            --yellow: #FFD600;
+            --red: #FF3B30;
+        }
+    }
+
+    @layer base {
+        body {
+            @apply bg-black text-white font-sans antialiased;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1.2;
+            font-weight: 900;
+        }
+        
+        button, a {
+            min-height: 44px;
+            min-width: 44px;
+        }
+    }
+
+    @layer components {
+        .glass-effect {
+            @apply bg-white bg-opacity-5 backdrop-blur-xl border border-white border-opacity-10;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="components/Sidebar.js"></script>
+    <script type="text/babel" src="components/BeforeAfterSlider.js"></script>
+    <script type="text/babel" src="before-after-app.js"></script>
+</body>
+</html>

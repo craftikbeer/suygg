@@ -1,0 +1,53 @@
+{
+  "lastUpdated": "2025-10-19T21:37:34Z",
+  "projects": [
+    {
+      "id": "1",
+      "title": "Редизайн сайта для стартапа",
+      "category": "Web Design",
+      "before": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&q=75&fm=webp",
+      "after": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=75&fm=webp",
+      "description": "Превратили устаревший сайт в современную платформу. Конверсия выросла на 220%, bounce rate упал на 65%."
+    },
+    {
+      "id": "2",
+      "title": "Ребрендинг технологической компании",
+      "category": "Branding",
+      "before": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1200&q=75&fm=webp",
+      "after": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=1200&q=75&fm=webp",
+      "description": "Полная трансформация визуальной идентичности. Узнаваемость бренда увеличилась на 180%."
+    },
+    {
+      "id": "3",
+      "title": "Редизайн мобильного приложения",
+      "category": "UI/UX",
+      "before": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=75&fm=webp",
+      "after": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&q=75&fm=webp",
+      "description": "UX-редизайн, который изменил поведение пользователей. Время в приложении +350%, retention +190%."
+    },
+    {
+      "id": "4",
+      "title": "Редизайн e-commerce платформы",
+      "category": "Web Design",
+      "before": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=1200&q=75&fm=webp",
+      "after": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&q=75&fm=webp",
+      "description": "Переосмысление покупательского опыта. Средний чек вырос на 45%, конверсия +280%."
+    },
+    {
+      "id": "5",
+      "title": "Обновление корпоративной айдентики",
+      "category": "Branding",
+      "before": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=75&fm=webp",
+      "after": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1200&q=75&fm=webp",
+      "description": "От скучного к премиальному за 3 недели. Лиды подорожали в 2 раза, но конверсия выросла в 4."
+    },
+    {
+      "id": "6",
+      "title": "Редизайн SaaS дашборда",
+      "category": "UI/UX",
+      "before": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=75&fm=webp",
+      "after": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=75&fm=webp",
+      "description": "Сложную аналитику превратили в понятный интерфейс. Время обучения сократилось на 70%."
+    }
+  ]
+}

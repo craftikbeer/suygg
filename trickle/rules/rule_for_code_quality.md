@@ -1,0 +1,15 @@
+When writing or updating code:
+- Always use React.memo for functional components to prevent unnecessary re-renders
+- Use React.useCallback for event handlers and functions passed as props
+- Use React.useMemo for expensive computations and static data arrays
+- Extract reusable logic into custom hooks (useLocalStorage, useProjects, etc)
+- Never store sensitive data (passwords, API keys) directly in code - use config.js
+- Add rate limiting to forms (minimum 10 seconds between submissions)
+- Avoid dangerouslySetInnerHTML - use safe alternatives
+- Use error boundaries to catch and handle component errors gracefully
+- Add passive: true to scroll event listeners for better performance
+- Use try-catch blocks for localStorage operations (may fail in private browsing)
+- Validate all data from localStorage before using
+- Use const for values that don't change, let for those that do
+- Prefer arrow functions for inline callbacks
+- Keep functions small and focused on a single responsibility
