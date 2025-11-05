@@ -39,8 +39,10 @@ function App() {
         <ScrollIndicator />
         <Header />
         <HeroBrutal />
+        <MarqueeTicker />
         <div>
           <Services />
+          <ProjectsMarquee />
           <Benefits />
           <Gallery />
           <ContactForm />

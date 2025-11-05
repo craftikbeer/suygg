@@ -17,7 +17,7 @@ function ProjectModal({ project, currentIndex, totalProjects, onNavigate, onClos
 
   return (
     <div 
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95 backdrop-blur-xl"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95 backdrop-blur-xl overflow-y-auto"
       onClick={handleBackdropClick}
       data-name="project-modal"
       data-file="components/ProjectModal.js"
@@ -27,7 +27,7 @@ function ProjectModal({ project, currentIndex, totalProjects, onNavigate, onClos
       }}
     >
       <div 
-        className="relative max-w-6xl w-full"
+        className="relative max-w-4xl w-full my-8"
         style={{
           transform: isLoaded ? 'scale(1) translateY(0)' : 'scale(0.95) translateY(20px)',
           transition: 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)'
@@ -76,7 +76,7 @@ function ProjectModal({ project, currentIndex, totalProjects, onNavigate, onClos
                 src={project.image} 
                 alt={project.title}
                 loading="lazy"
-                className="w-full h-[500px] object-cover"
+                className="w-full h-auto max-h-[45vh] object-contain"
               />
               <div className="absolute inset-0 pointer-events-none" style={{
                 background: 'repeating-linear-gradient(0deg, rgba(0,0,0,0.1) 0px, transparent 2px, transparent 4px)',

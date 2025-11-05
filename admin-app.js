@@ -496,7 +496,8 @@ function ProjectForm({ project, onClose }) {
     after: project?.after || '',
     description: project?.description || '',
     comment: project?.comment || '',
-    tags: project?.tags?.join(', ') || ''
+    tags: project?.tags?.join(', ') || '',
+    showInMarquee: project?.showInMarquee || false
   });
   const [saving, setSaving] = React.useState(false);
 
@@ -519,7 +520,8 @@ function ProjectForm({ project, onClose }) {
         image: formData.image,
         description: formData.description,
         comment: formData.comment,
-        tags: formData.tags.split(',').map(t => t.trim()).filter(t => t)
+        tags: formData.tags.split(',').map(t => t.trim()).filter(t => t),
+        showInMarquee: formData.showInMarquee
       };
 
       if (isBeforeAfter) {
@@ -671,6 +673,18 @@ function ProjectForm({ project, onClose }) {
                   placeholder="React, UI/UX, Three.js"
                   className="w-full bg-transparent border border-white border-opacity-20 rounded-lg px-4 py-3 focus:outline-none focus:border-opacity-50"
                 />
+              </div>
+              <div className="flex items-center gap-3 p-4 bg-white bg-opacity-5 rounded-lg border border-white border-opacity-10">
+                <input
+                  type="checkbox"
+                  id="showInMarquee"
+                  checked={formData.showInMarquee}
+                  onChange={(e) => setFormData({...formData, showInMarquee: e.target.checked})}
+                  className="w-5 h-5 cursor-pointer"
+                />
+                <label htmlFor="showInMarquee" className="text-sm font-bold cursor-pointer flex-1">
+                  ✅ Показать в бегущей ленте (на главной странице)
+                </label>
               </div>
             </React.Fragment>
           )}

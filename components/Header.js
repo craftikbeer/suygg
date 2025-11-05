@@ -19,33 +19,33 @@ const Header = React.memo(function Header() {
   return (
     <>
       <header 
-        className="fixed top-0 left-0 right-0 z-50 bg-black border-b-4 border-white py-4 transition-transform duration-300"
+        className="fixed top-0 left-0 right-0 z-50 bg-black border-b-4 border-white transition-transform duration-300"
         style={{
           transform: isVisible ? 'translateY(0)' : 'translateY(-100%)'
         }}
         data-name="header"
         data-file="components/Header.js"
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 flex items-center justify-between h-20">
           <a 
             href="index.html"
-            className="text-xl md:text-2xl font-black uppercase"
+            className="text-2xl md:text-3xl font-black uppercase tracking-tighter"
           >
             NEUROCRAFTS
           </a>
 
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden md:flex items-center gap-0 border-4 border-white">
             <a
               href="before-after.html"
-              className="px-4 py-2 font-black text-sm uppercase hover:bg-white hover:text-black transition-all"
+              className="px-8 py-4 font-black text-sm uppercase bg-white text-black hover:bg-[var(--accent-color)] transition-all border-r-4 border-black"
             >
               РЕДИЗАЙН
             </a>
-            {menuItems.map((item) => (
+            {menuItems.map((item, index) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="px-4 py-2 font-black text-sm uppercase hover:bg-white hover:text-black transition-all"
+                className={`px-8 py-4 font-black text-sm uppercase hover:bg-white hover:text-black transition-all ${index < menuItems.length - 1 ? 'border-r-4 border-white' : ''}`}
               >
                 {item.label}
               </button>
@@ -54,7 +54,7 @@ const Header = React.memo(function Header() {
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden w-11 h-11 flex items-center justify-center"
+            className="md:hidden w-14 h-14 border-4 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all"
           >
             <div className={`icon-${isMobileMenuOpen ? 'x' : 'menu'} text-2xl`}></div>
           </button>
@@ -64,20 +64,20 @@ const Header = React.memo(function Header() {
       {isMobileMenuOpen && (
         <div 
           className="fixed inset-0 z-40 bg-black md:hidden"
-          style={{ top: '72px' }}
+          style={{ top: '80px' }}
         >
-          <nav className="flex flex-col p-4 gap-2">
+          <nav className="flex flex-col p-0 gap-0 border-4 border-white m-4">
             <a
               href="before-after.html"
-              className="px-6 py-4 font-black text-sm uppercase text-left border-l-4 border-transparent hover:border-white hover:bg-white/5 transition-all"
+              className="px-6 py-5 font-black text-base uppercase text-center bg-white text-black border-b-4 border-black hover:bg-[var(--accent-color)] transition-all"
             >
               РЕДИЗАЙН
             </a>
-            {menuItems.map((item) => (
+            {menuItems.map((item, index) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="px-6 py-4 font-black text-sm uppercase text-left border-l-4 border-transparent hover:border-white hover:bg-white/5 transition-all"
+                className={`px-6 py-5 font-black text-base uppercase text-center hover:bg-white hover:text-black transition-all ${index < menuItems.length - 1 ? 'border-b-4 border-white' : ''}`}
               >
                 {item.label}
               </button>

@@ -40,8 +40,12 @@ function Gallery() {
       if (stored) {
         try {
           const data = JSON.parse(stored);
-          setProjects(data.projects || []);
-          setFilteredProjects(data.projects || []);
+          const imageProjects = (data.projects || []).filter(p => {
+            const img = p.image || '';
+            return !img.includes('.mp4') && !img.includes('.webm') && !img.includes('video');
+          });
+          setProjects(imageProjects);
+          setFilteredProjects(imageProjects);
           return;
         } catch (parseError) {
           console.warn('Failed to parse stored data');
@@ -76,7 +80,10 @@ function Gallery() {
           comment: "Клиент инвестировал втрое больше изначального бюджета. Результат того стоил.",
           tags: ["Логотип", "Концепт", "Редизайн", "Брендинг", "Премиум", "Фирменный стиль"]
         }
-      ];
+      ].filter(p => {
+        const img = p.image || '';
+        return !img.includes('.mp4') && !img.includes('.webm') && !img.includes('video');
+      });
       
       setProjects(fallbackProjects);
       setFilteredProjects(fallbackProjects);
@@ -90,7 +97,10 @@ function Gallery() {
         
         if (response.ok) {
           const data = await response.json();
-          const projectsData = data.projects || fallbackProjects;
+          const projectsData = (data.projects || fallbackProjects).filter(p => {
+            const img = p.image || '';
+            return !img.includes('.mp4') && !img.includes('.webm') && !img.includes('video');
+          });
           setProjects(projectsData);
           setFilteredProjects(projectsData);
           try {
